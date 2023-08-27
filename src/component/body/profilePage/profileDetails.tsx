@@ -7,8 +7,8 @@ import { BsDiscord } from "react-icons/bs";
 
 const ProfileDetail = () => {
   return (
-    <div>
-      <div className="flex flex-col gap-[24px] p-[24px] profile-detail-style w-[315px]">
+    <div className="lg:w-4/12 sm:w-full ">
+      <div className="flex flex-col gap-[24px] p-[24px] profile-detail-style">
         <div className="flex flex-row justify-between rounded-full bg-[292C31]">
           <HiLogout
             fontSize={"16px"}

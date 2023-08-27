@@ -3,11 +3,11 @@ import Auctions from "../../common/auctions";
 
 const NftOwned = () => {
   return (
-    <div className="flex flex-col gap-[24px] pb-[32px] text-left">
+    <div className="flex flex-col gap-[24px] pb-[32px] text-left overflow-auto">
       <p className="text-[24px] font-extrabold capitalize leading-[32px] text-white">
         NFTS Owned
       </p>
-      <div className="grid grid-cols-3 gap-[24px]">
+      <div className="sm:grid sm:grid-cols-3 max-sm:flex max-sm:flex-row gap-[24px]">
         <Auctions
           imgSrc="./avatar/ (3).png"
           cardIndex="#3810"
