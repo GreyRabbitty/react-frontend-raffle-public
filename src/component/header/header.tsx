@@ -3,10 +3,13 @@ import { BiLogoTelegram, BiLogoDiscordAlt } from "react-icons/bi";
 import { FaEthereum } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import AvatarMenu from "../common/avatarMenu";
+import { Web3Button } from "@web3modal/react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   // const [isLogin, setIsLogin] = useState(false);
-  const isLogin = false;
+  const isLogin = true;
+  const { i18n, t } = useTranslation();
 
   return (
     <div>
@@ -71,9 +74,10 @@ const Header = () => {
             <div className="w-[46px] p-[11px]">
               <BiLogoDiscordAlt size={"24px"} color="#E5E1A8" />
             </div>
-            <div className="w-[184px] h-[50px] py-[10px] px-[32px] justify-center align-middle cursor-pointer rounded-full header-border-style text-white">
+            {/* <div className="w-[184px] h-[50px] py-[10px] px-[32px] justify-center align-middle cursor-pointer rounded-full header-border-style text-white">
               Connect Wallet
-            </div>
+            </div> */}
+            <Web3Button balance="hide" label={t("Connect wallet")} />
           </div>
         ) : (
           <div className="flex flex-row gap-[16px]">
