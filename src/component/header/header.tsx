@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BiLogoTelegram, BiLogoDiscordAlt } from "react-icons/bi";
 import { FaEthereum } from "react-icons/fa";
@@ -20,38 +21,38 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex justify-between align-middle header-bg border border-[#555659] w-full md:rounded-full py-[18px] pl-[32px] pr-[18px] ">
+      <div className="flex justify-between items-center header-bg border border-[#555659] w-full md:rounded-full py-[18px] pl-[32px] pr-[18px] ">
         <div className="hidden lg:block">
           <ul className="flex gap-[32px] text-white my-auto">
             <li key={1}>
-              <a className="cursor-pointer" href="./">
+              <Link className="cursor-pointer" to="./">
                 DeFi
-              </a>
+              </Link>
             </li>
             <li key={2}>
-              <a className="cursor-pointer" href="./profile">
+              <Link className="cursor-pointer" to="./profile">
                 Colourize
-              </a>
+              </Link>
             </li>
             <li key={3}>
-              <a className="cursor-pointer" href="./detail">
+              <Link className="cursor-pointer" to="./detail">
                 Arm Protocol
-              </a>
+              </Link>
             </li>
             <li key={4}>
-              <a className="cursor-pointer" href="./analytics">
+              <Link className="cursor-pointer" to="./analytics">
                 Winners
-              </a>
+              </Link>
             </li>
             {/* <li key={5}>
-              <a className="cursor-pointer" href="./land">
+              <Link className="cursor-pointer" to="./land">
                 Landing
-              </a>
+              </Link>
             </li> */}
           </ul>
         </div>
 
-        <div className="flex">
+        <div className="flex items-center">
           <img
             src="./header.png"
             alt="header png"
@@ -64,7 +65,7 @@ const Header = () => {
           ></img>
         </div>
         {isLogin ? (
-          <div className="flex ">
+          <div className="flex items-center">
             <div className="w-[46px] p-[11px]">
               <AiOutlineTwitter size={"24px"} color="#E5E1A8" />
             </div>
@@ -77,10 +78,10 @@ const Header = () => {
             {/* <div className="w-[184px] h-[50px] py-[10px] px-[32px] justify-center align-middle cursor-pointer rounded-full header-border-style text-white">
               Connect Wallet
             </div> */}
-            <Web3Button balance="hide" label={t("Connect wallet")} />
+            <Web3Button balance="hide" label={t("Connect wallet")}/>
           </div>
         ) : (
-          <div className="flex flex-row gap-[16px]">
+          <div className="flex flex-row gap-[16px] items-center">
             <div className="flex flex-row">
               <div className="flex flex-row items-center gap-[8px] py-[12px] px-[24px] rounded-l-[100px] bg-[#131619] text-white">
                 <div className="flex justify-center items-center rounded-full w-[20px] h-[20px] bg-[#505050]">

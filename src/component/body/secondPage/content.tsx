@@ -55,11 +55,13 @@ const Content: React.FC<detailPageProp> = ({ finishFlag }) => {
   ];
 
   return (
-    <div className="flex lg:flex-row flex-col gap-[40px] w-full">
+    <div className="flex lg:flex-row max-lg:flex-col gap-[40px] w-full">
       {/* <img src="./avatar/ (3).png" className="w-2/5 detail-page-avatar-style" alt="avatar png"></img> */}
       <div className="flex flex-col gap-[24px] w-full lg:w-5/12">
-        <Auctions imgSrc="./avatar/ (2).png" />
-        <div className="p-[2px] auction2-border relative">
+        <div>
+          <Auctions imgSrc="./avatar/ (2).png" />
+        </div>
+        <div className="hidden p-[2px] auction2-border lg:block relative">
           <div className="flex flex-col gap-[16px] p-[24px] pb-[16px] auction2-style ">
             <div className="flex flex-col gap-[8px]">
               <img
@@ -87,12 +89,12 @@ const Content: React.FC<detailPageProp> = ({ finishFlag }) => {
       </div>
       <div className="flex flex-col gap-[24px] w-full lg:w-7/12">
         <div>
-          <div className="flex md:flex-row flex-col gap-[8px] items-center">
+          <div className="flex md:flex-row flex-col gap-[8px] items-center text-left">
             <p className="text-[32px] text-white mr-[8px] font-[Lato]">
               King Punk 2023
             </p>
             <div className="flex flex-row items-center  justify-start">
-              <p className="text-[32px] text-white mr-[8px] font-[Lato]">
+              <p className="text-[32px] text-white mr-[8px] font-[Lato] text-left">
                 Edition
               </p>
               <BiSolidBadgeCheck size={"24px"} color="#E42B2B" />
@@ -151,7 +153,7 @@ const Content: React.FC<detailPageProp> = ({ finishFlag }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-[8px] text-white">
+        <div className="flex flex-col gap-[8px] text-white text-left">
           <p className="text-[18px] font-bold leading-[24px]">Description</p>
           <p className="text-[18px] leading-[24px] font-medium">
             Enter now for a chance to win Mutant Ape Yacht Club #10735. The
@@ -164,7 +166,7 @@ const Content: React.FC<detailPageProp> = ({ finishFlag }) => {
           </p>
         </div>
         <div className="flex flex-row justify-between border gap-[16px] p-[24px] text-white  w-full bodyInfo-right-start-bg">
-          <div className="flex flex-col text-[18px] font-normal leading-[24px]">
+          <div className="flex flex-col text-[18px] font-normal leading-[24px] text-left">
             <p>CONTRACT:</p>
             <p className="hidden md:block">
               0X4F9343FA110E8C5C1276B810FBBBB70A19678...

@@ -14,15 +14,15 @@ const MyRafflePart = () => {
           alt="avatar png"
           className="rounded-[16px] w-[94px] h-[120px]"
         />
-        <div className="flex flex-col gap-[12px]">
-          <div className="flex flex-row items-center gap-[4px] pb-[16px]">
-            <div className="flex flex-row gap-[4px] w-[580px] ">
+        <div className="flex flex-col gap-[12px] w-full">
+          <div className="flex xl:flex-row max-xl:flex-col items-center justify-between gap-[4px] pb-[16px] border-b-[2px] border-b-[#3A3D42]">
+            <div className="flex flex-row gap-[4px]">
               <div className="flex flex-row gap-[8px] items-center">
                 <p className="text-[24px] font-bold leading-[32px] text-white mr-[8px] font-[Lato]">
                   King Punk 2023 Edition
                 </p>
-                <BiSolidBadgeCheck size={"24px"} color="#E42B2B" />
-                <p className="text-[14px] font-medium leading-[16px] text-[#E5E1A8]">
+                <BiSolidBadgeCheck size={"24px"} color="#E42B2B" className="hidden lg:block" />
+                <p className="text-[14px] font-medium leading-[16px] hidden lg:block text-[#E5E1A8]">
                   #93272
                 </p>
               </div>
@@ -36,7 +36,7 @@ const MyRafflePart = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-[12px] text-left w-full">
+          <div className="grid 2xl:grid-cols-4 max-2xl:grid-rows-4 gap-[12px] text-left w-full">
             <div className="flex flex-col gap-[8px]">
               <p className="text-white text-[14px] font-semibold leading-[20px]">
                 Sales Ends in:

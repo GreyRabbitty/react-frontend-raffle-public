@@ -7,7 +7,7 @@ interface auction2Prop {
 
 const Auctions2:React.FC<auction2Prop> = ({ imgSrc }) => {
   return (
-    <div className='p-[2px] auction2-border relative'>
+    <div className='p-[2px] auction2-border relative min-w-[180px]'>
         <div className='flex flex-col gap-[16px] px-[12px] pt-[12px] pb-[16px] auction2-style '>
             <div>
                 <div className='flex justify-center items-center p-[12px] rounded-tl-[24px] rounded-br-[24px] bg-red-600 h-[56px] w-[56px] absolute top-0 left-0'>
